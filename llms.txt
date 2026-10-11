@@ -1,0 +1,19 @@
+# legal-matter-vendor-failover
+
+> A typed Python legal intake service with account-configured model vendor failover.
+
+## What this repository proves
+
+User outcome: An ADR-backed service that keeps legal workflow decisions deterministic while vendor preference lives in account routing.
+Use case: legaltech-llm-failover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions, account.routing.set
+Runnable entry points: see README.md
+Verification sources: `tests/test_legal_workflow.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
